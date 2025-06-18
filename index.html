@@ -19,12 +19,11 @@
             overflow-x: hidden;
         }
 
-        /* Telegram Mini App specific styles */
         .container {
             max-width: 100%;
             min-height: 100vh;
             background: #1a1a1a;
-            padding: 16px;
+            padding: 20px 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -32,110 +31,73 @@
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 64px;
+            height: 64px;
             background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
+            border-radius: 16px;
             margin: 0 auto 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 28px;
             color: white;
             font-weight: bold;
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
         }
 
         .title {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 20px;
+            font-weight: 600;
             color: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             text-align: center;
         }
 
         .subtitle {
-            font-size: 16px;
+            font-size: 15px;
             color: #b0b0b0;
             margin-bottom: 32px;
-            line-height: 1.5;
+            line-height: 1.4;
             text-align: center;
-            max-width: 320px;
-        }
-
-        .features {
-            margin: 32px 0;
-            width: 100%;
-            max-width: 320px;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-            padding: 16px;
-            background: #2a2a2a;
-            border-radius: 12px;
-            border: 1px solid #3a3a3a;
-        }
-
-        .feature-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 16px;
-            color: white;
-        }
-
-        .feature-text {
-            font-size: 14px;
-            color: #ffffff;
-            font-weight: 500;
+            max-width: 280px;
         }
 
         .verify-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #667eea;
             color: white;
             border: none;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
             cursor: pointer;
             width: 100%;
-            max-width: 320px;
+            max-width: 280px;
             transition: all 0.2s ease;
-            margin-top: 24px;
+            margin-bottom: 16px;
         }
 
         .verify-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            background: #5a67d8;
         }
 
         .verify-btn:active {
-            transform: translateY(0);
+            transform: scale(0.98);
         }
 
         .loading {
             display: none;
-            margin-top: 24px;
+            margin-top: 16px;
             text-align: center;
         }
 
         .spinner {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             border: 2px solid #3a3a3a;
             border-top: 2px solid #667eea;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 0 auto 12px;
+            margin: 0 auto 8px;
         }
 
         @keyframes spin {
@@ -144,64 +106,36 @@
         }
 
         .status {
-            font-size: 14px;
+            font-size: 13px;
             color: #b0b0b0;
         }
 
         .footer {
-            margin-top: 32px;
-            padding-top: 24px;
-            border-top: 1px solid #3a3a3a;
+            margin-top: 24px;
             font-size: 12px;
             color: #808080;
             text-align: center;
-            max-width: 320px;
-        }
-
-        .security-badge {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(56, 161, 105, 0.2);
-            color: #68d391;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 500;
-            margin-top: 16px;
-            border: 1px solid rgba(56, 161, 105, 0.3);
-        }
-
-        .security-badge::before {
-            content: '🔒';
-            margin-right: 6px;
+            max-width: 280px;
         }
 
         /* Telegram WebApp specific adjustments */
         @media (max-width: 480px) {
             .container {
-                padding: 12px;
+                padding: 16px 12px;
             }
             
             .title {
-                font-size: 22px;
+                font-size: 18px;
             }
             
             .subtitle {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             .logo {
-                width: 72px;
-                height: 72px;
-                font-size: 28px;
-            }
-
-            .features {
-                max-width: 100%;
-            }
-
-            .verify-btn {
-                max-width: 100%;
+                width: 56px;
+                height: 56px;
+                font-size: 24px;
             }
         }
 
@@ -223,7 +157,7 @@
         }
 
         .tg-theme-button {
-            background: linear-gradient(135deg, #667eea, #764ba2) !important;
+            background: #667eea !important;
             color: #ffffff !important;
         }
 
@@ -237,29 +171,10 @@
         <div class="logo">H</div>
         
         <h1 class="title">Homit Premium Group</h1>
-        <p class="subtitle">Unlock exclusive access to premium trading signals, market analysis, and expert insights.</p>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">📈</div>
-                <div class="feature-text">Premium Trading Signals</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">💎</div>
-                <div class="feature-text">Exclusive Market Analysis</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🚀</div>
-                <div class="feature-text">Early Access to Opportunities</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">👥</div>
-                <div class="feature-text">Expert Community Support</div>
-            </div>
-        </div>
+        <p class="subtitle">Join our exclusive community for premium trading signals and expert insights.</p>
 
         <button class="verify-btn" onclick="startVerification()">
-            🔐 Verify Account & Join Group
+            🔐 Verify Account
         </button>
 
         <div class="loading" id="loading">
@@ -267,11 +182,8 @@
             <div class="status">Verifying your account...</div>
         </div>
 
-        <div class="security-badge">Secure Verification Process</div>
-
         <div class="footer">
-            <p>By joining, you agree to our terms of service and community guidelines.</p>
-            <p>© 2024 Homit Support. All rights reserved.</p>
+            <p>By joining, you agree to our terms of service.</p>
         </div>
     </div>
 
