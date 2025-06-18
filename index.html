@@ -13,209 +13,129 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            background: #1a1a1a;
+            color: #ffffff;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
-        /* Animated background particles */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-20px) rotate(1deg); }
-            66% { transform: translateY(10px) rotate(-1deg); }
-        }
-
+        /* Telegram Mini App specific styles */
         .container {
-            background: rgba(15, 15, 35, 0.8);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0;
-            padding: 40px 20px;
-            width: 100%;
+            max-width: 100%;
             min-height: 100vh;
-            text-align: center;
-            position: relative;
+            background: #1a1a1a;
+            padding: 16px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            z-index: 1;
+            justify-content: center;
         }
 
         .logo {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             border-radius: 50%;
-            margin: 0 auto 30px;
+            margin: 0 auto 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
+            font-size: 32px;
             color: white;
             font-weight: bold;
-            box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
-            animation: pulse 2s ease-in-out infinite;
-            position: relative;
-        }
-
-        .logo::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-            border-radius: 50%;
-            z-index: -1;
-            opacity: 0.3;
-            animation: pulse 2s ease-in-out infinite reverse;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
         }
 
         .title {
-            font-size: 32px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 15px;
-            text-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            text-align: center;
         }
 
         .subtitle {
-            font-size: 18px;
-            color: #a0aec0;
-            margin-bottom: 40px;
-            line-height: 1.6;
-            max-width: 500px;
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-bottom: 32px;
+            line-height: 1.5;
+            text-align: center;
+            max-width: 320px;
         }
 
         .features {
-            margin: 40px 0;
-            text-align: left;
-            max-width: 400px;
+            margin: 32px 0;
             width: 100%;
+            max-width: 320px;
         }
 
         .feature {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .feature:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(102, 126, 234, 0.5);
-            transform: translateX(5px);
+            margin-bottom: 16px;
+            padding: 16px;
+            background: #2a2a2a;
+            border-radius: 12px;
+            border: 1px solid #3a3a3a;
         }
 
         .feature-icon {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             background: linear-gradient(135deg, #667eea, #764ba2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
-            font-size: 18px;
+            margin-right: 12px;
+            font-size: 16px;
             color: white;
-            box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
         }
 
         .feature-text {
-            font-size: 16px;
-            color: #e2e8f0;
+            font-size: 14px;
+            color: #ffffff;
             font-weight: 500;
         }
 
         .verify-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             border: none;
-            padding: 20px 40px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 700;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
             width: 100%;
-            max-width: 300px;
-            transition: all 0.3s ease;
-            margin-top: 30px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        }
-
-        .verify-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .verify-btn:hover::before {
-            left: 100%;
+            max-width: 320px;
+            transition: all 0.2s ease;
+            margin-top: 24px;
         }
 
         .verify-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
         }
 
         .verify-btn:active {
-            transform: translateY(-1px);
+            transform: translateY(0);
         }
 
         .loading {
             display: none;
-            margin-top: 30px;
+            margin-top: 24px;
+            text-align: center;
         }
 
         .spinner {
-            width: 30px;
-            height: 30px;
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            border-top: 3px solid #667eea;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #3a3a3a;
+            border-top: 2px solid #667eea;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 0 auto;
+            margin: 0 auto 12px;
         }
 
         @keyframes spin {
@@ -224,19 +144,18 @@
         }
 
         .status {
-            margin-top: 15px;
-            font-size: 16px;
-            color: #a0aec0;
-            font-weight: 500;
+            font-size: 14px;
+            color: #b0b0b0;
         }
 
         .footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
-            color: #718096;
-            max-width: 400px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #3a3a3a;
+            font-size: 12px;
+            color: #808080;
+            text-align: center;
+            max-width: 320px;
         }
 
         .security-badge {
@@ -244,85 +163,81 @@
             align-items: center;
             background: rgba(56, 161, 105, 0.2);
             color: #68d391;
-            padding: 8px 16px;
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 20px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 16px;
             border: 1px solid rgba(56, 161, 105, 0.3);
-            backdrop-filter: blur(10px);
         }
 
         .security-badge::before {
             content: '🔒';
-            margin-right: 8px;
+            margin-right: 6px;
         }
 
-        /* Floating elements */
-        .floating-element {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(102, 126, 234, 0.6);
-            border-radius: 50%;
-            animation: float-element 6s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            bottom: 30%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-
-        @keyframes float-element {
-            0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
-            50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
-        }
-
+        /* Telegram WebApp specific adjustments */
         @media (max-width: 480px) {
             .container {
-                padding: 30px 15px;
+                padding: 12px;
             }
             
             .title {
-                font-size: 28px;
+                font-size: 22px;
             }
             
             .subtitle {
-                font-size: 16px;
+                font-size: 15px;
             }
 
             .logo {
-                width: 80px;
-                height: 80px;
-                font-size: 32px;
+                width: 72px;
+                height: 72px;
+                font-size: 28px;
             }
+
+            .features {
+                max-width: 100%;
+            }
+
+            .verify-btn {
+                max-width: 100%;
+            }
+        }
+
+        /* Dark theme specific colors */
+        .tg-theme-bg {
+            background: #1a1a1a !important;
+        }
+
+        .tg-theme-text {
+            color: #ffffff !important;
+        }
+
+        .tg-theme-hint {
+            color: #b0b0b0 !important;
+        }
+
+        .tg-theme-link {
+            color: #667eea !important;
+        }
+
+        .tg-theme-button {
+            background: linear-gradient(135deg, #667eea, #764ba2) !important;
+            color: #ffffff !important;
+        }
+
+        .tg-theme-button-text {
+            color: #ffffff !important;
         }
     </style>
 </head>
 <body>
-    <!-- Floating background elements -->
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-
     <div class="container">
         <div class="logo">H</div>
         
         <h1 class="title">Homit Premium Group</h1>
-        <p class="subtitle">Unlock exclusive access to premium trading signals, market analysis, and expert insights in our elite community.</p>
+        <p class="subtitle">Unlock exclusive access to premium trading signals, market analysis, and expert insights.</p>
         
         <div class="features">
             <div class="feature">
@@ -365,20 +280,37 @@
         const urlParams = new URLSearchParams(window.location.search);
         const startParam = urlParams.get('startapp') || urlParams.get('start');
         
-        // Initialize Telegram WebApp if available
+        // Initialize Telegram WebApp
         if (window.Telegram && window.Telegram.WebApp) {
             try {
+                // Initialize the WebApp
                 window.Telegram.WebApp.ready();
+                
+                // Expand to full height
                 window.Telegram.WebApp.expand();
                 
-                // Set theme colors
+                // Set theme colors based on Telegram theme
                 const themeParams = window.Telegram.WebApp.themeParams;
                 if (themeParams) {
-                    document.documentElement.style.setProperty('--tg-theme-bg-color', themeParams.bg_color || '#0f0f23');
-                    document.documentElement.style.setProperty('--tg-theme-text-color', themeParams.text_color || '#ffffff');
+                    // Apply Telegram theme colors
+                    document.body.style.backgroundColor = themeParams.bg_color || '#1a1a1a';
+                    document.body.style.color = themeParams.text_color || '#ffffff';
+                    
+                    // Update container background
+                    const container = document.querySelector('.container');
+                    if (container) {
+                        container.style.backgroundColor = themeParams.bg_color || '#1a1a1a';
+                    }
                 }
+
+                // Set header color
+                window.Telegram.WebApp.setHeaderColor('#1a1a1a');
+                
+                // Set background color
+                window.Telegram.WebApp.setBackgroundColor('#1a1a1a');
+                
             } catch (e) {
-                console.log('Telegram WebApp not available:', e);
+                console.log('Telegram WebApp initialization error:', e);
             }
         }
 
